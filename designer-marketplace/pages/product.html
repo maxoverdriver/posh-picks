@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designer Handbag - Posh Picks</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-[Poppins] product-detail-page">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="../index.html" class="text-2xl font-bold text-gray-800">Posh <span class="text-indigo-600">Picks</span></a>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="../index.html" class="text-gray-800 hover:text-indigo-600 transition">Home</a>
+                <a href="shop.html" class="text-gray-800 hover:text-indigo-600 transition">Shop</a>
+                <a href="about.html" class="text-gray-800 hover:text-indigo-600 transition">About</a>
+                <a href="contact.html" class="text-gray-800 hover:text-indigo-600 transition">Contact</a>
+            </nav>
+            
+            <!-- User Actions -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="account.html" class="text-gray-800 hover:text-indigo-600 transition">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="cart.html" class="text-gray-800 hover:text-indigo-600 transition relative">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-indigo-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Product Detail -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Product Gallery -->
+                <div class="product-gallery">
+                    <div class="thumbnail-container">
+                        <img src="../images/placeholder.html" alt="Thumbnail 1" class="thumbnail active" data-index="0">
+                        <img src="../images/placeholder.html" alt="Thumbnail 2" class="thumbnail" data-index="1">
+                        <img src="../images/placeholder.html" alt="Thumbnail 3" class="thumbnail" data-index="2">
+                        <img src="../images/placeholder.html" alt="Thumbnail 4" class="thumbnail" data-index="3">
+                    </div>
+                    <div class="main-image-container">
+                        <img src="../images/placeholder.html" alt="Designer Handbag" class="main-image">
+                    </div>
+                </div>
+                
+                <!-- Product Info -->
+                <div>
+                    <div class="mb-2">
+                        <span class="inline-block bg-indigo-600 text-white text-xs px-2 py-1 rounded">New</span>
+                    </div>
+                    <h1 class="text-3xl font-bold mb-2">Designer Handbag</h1>
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-gray-600 text-sm">(24 reviews)</span>
+                    </div>
+                    <div class="mb-4">
+                        <span class="text-2xl font-bold text-indigo-600">$129.99</span>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        Inspired by luxury fashion, this designer handbag features premium quality materials and exquisite craftsmanship. Perfect for everyday use or special occasions, this versatile accessory will elevate any outfit.
+                    </p>
+                    
+                    <div class="mb-6">
+                        <h3 class="font-semibold mb-2">Features:</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Premium quality materials</li>
+                            <li>Spacious interior with multiple compartments</li>
+                            <li>Adjustable shoulder strap</li>
+                            <li>Gold-tone hardware</li>
+                            <li>Signature logo detail</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <div class="flex items-center">
+                            <div class="mr-4">
+                                <label for="quantity" class="block font-semibold mb-1">Quantity:</label>
+                                <div class="flex items-center">
+                                    <button class="quantity-btn decrease bg-gray-200 px-3 py-1 rounded-l">-</button>
+                                    <input type="number" id="quantity" class="product-quantity w-16 text-center border-y py-1" value="1" min="1">
+                                    <button class="quantity-btn increase bg-gray-200 px-3 py-1 rounded-r">+</button>
+                                </div>
+                            </div>
+                            <div class="text-gray-600">
+                                <span class="block font-semibold mb-1">Availability:</span>
+                                <span class="text-green-600"><i class="fas fa-check-circle mr-1"></i> In Stock (10 items)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3">
+                        <button class="product-add-to-cart bg-indigo-600 text-white py-3 px-6 rounded-md font-medium hover:bg-indigo-700 transition flex-grow flex items-center justify-center" data-id="1">
+                            <i class="fas fa-shopping-cart mr-2"></i> Add to Cart
+                        </button>
+                        <button class="border border-indigo-600 text-indigo-600 py-3 px-6 rounded-md font-medium hover:bg-indigo-50 transition flex items-center justify-center">
+                            <i class="fas fa-heart mr-2"></i> Add to Wishlist
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Posh <span class="text-indigo-400">Picks</span></h3>
+                    <p class="text-gray-400 mb-4">Your destination for designer inspired merchandise at affordable prices.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="shop.html" class="text-gray-400 hover:text-white transition">Shop</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Customer Service -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Customer Service</h4>
+                    <ul class="space-y-2">
+                        <li><a href="faq.html" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                        <li><a href="shipping.html" class="text-gray-400 hover:text-white transition">Shipping & Returns</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition">Terms & Conditions</a></li>
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> 123 Fashion Street, New York, NY</li>
+                        <li><i class="fas fa-phone mr-2"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@poshpicks.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Posh Picks. All rights reserved.</p>
+                <p class="mt-2">Payment methods accepted: <i class="fab fa-cc-visa mx-1"></i> <i class="fab fa-cc-mastercard mx-1"></i> <i class="fab fa-cc-amex mx-1"></i> <i class="fab fa-cc-paypal mx-1"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
+</body>
+</html>

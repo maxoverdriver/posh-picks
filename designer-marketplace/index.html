@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posh Picks - Designer Inspired Collections</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-[Poppins]">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="index.html" class="text-2xl font-bold text-gray-800">Posh <span class="text-indigo-600">Picks</span></a>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-800 hover:text-indigo-600 transition">Home</a>
+                <a href="pages/shop.html" class="text-gray-800 hover:text-indigo-600 transition">Shop</a>
+                <a href="pages/about.html" class="text-gray-800 hover:text-indigo-600 transition">About</a>
+                <a href="pages/contact.html" class="text-gray-800 hover:text-indigo-600 transition">Contact</a>
+            </nav>
+            
+            <!-- Mobile Navigation Button -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-button" class="text-gray-800 hover:text-indigo-600 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- User Actions -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="pages/account.html" class="text-gray-800 hover:text-indigo-600 transition">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="pages/cart.html" class="text-gray-800 hover:text-indigo-600 transition relative">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-indigo-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-2">
+                <a href="index.html" class="block py-2 text-gray-800 hover:text-indigo-600 transition">Home</a>
+                <a href="pages/shop.html" class="block py-2 text-gray-800 hover:text-indigo-600 transition">Shop</a>
+                <a href="pages/about.html" class="block py-2 text-gray-800 hover:text-indigo-600 transition">About</a>
+                <a href="pages/contact.html" class="block py-2 text-gray-800 hover:text-indigo-600 transition">Contact</a>
+                <div class="flex items-center space-x-4 py-2">
+                    <a href="pages/account.html" class="text-gray-800 hover:text-indigo-600 transition">
+                        <i class="fas fa-user"></i> Account
+                    </a>
+                    <a href="pages/cart.html" class="text-gray-800 hover:text-indigo-600 transition">
+                        <i class="fas fa-shopping-cart"></i> Cart (<span id="mobile-cart-count">0</span>)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-indigo-600 text-white">
+        <div class="container mx-auto px-4 py-16 md:py-24">
+            <div class="max-w-xl">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Designer Inspired Collections</h1>
+                <p class="text-lg mb-8">Discover our exclusive selection of designer inspired merchandise at affordable prices.</p>
+                <a href="pages/shop.html" class="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition">Shop Now</a>
+            </div>
+        </div>
+        <div class="absolute bottom-0 right-0 w-full md:w-1/2 h-full opacity-20 md:opacity-30">
+            <div class="w-full h-full bg-indigo-700 bg-cover bg-center"></div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-12 md:py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Featured Products</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Product Card 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="relative">
+                        <img src="images/placeholder.html" alt="Product 1" class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2 bg-indigo-600 text-white text-xs px-2 py-1 rounded">New</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2">Designer Handbag</h3>
+                        <p class="text-gray-600 mb-2">Inspired by luxury fashion</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-indigo-600 font-bold">$129.99</span>
+                            <button class="add-to-cart bg-indigo-600 text-white px-3 py-1 rounded hover:bg-indigo-700 transition" data-id="1">
+                                <i class="fas fa-shopping-cart mr-1"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="relative">
+                        <img src="images/placeholder.html" alt="Product 2" class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Sale</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2">Designer Watch</h3>
+                        <p class="text-gray-600 mb-2">Elegant timepiece</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-indigo-600 font-bold">$89.99</span>
+                                <span class="text-gray-400 line-through ml-2">$119.99</span>
+                            </div>
+                            <button class="add-to-cart bg-indigo-600 text-white px-3 py-1 rounded hover:bg-indigo-700 transition" data-id="2">
+                                <i class="fas fa-shopping-cart mr-1"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="relative">
+                        <img src="images/placeholder.html" alt="Product 3" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2">Designer Sunglasses</h3>
+                        <p class="text-gray-600 mb-2">UV protection included</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-indigo-600 font-bold">$59.99</span>
+                            <button class="add-to-cart bg-indigo-600 text-white px-3 py-1 rounded hover:bg-indigo-700 transition" data-id="3">
+                                <i class="fas fa-shopping-cart mr-1"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                    <div class="relative">
+                        <img src="images/placeholder.html" alt="Product 4" class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded">Popular</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mb-2">Designer Wallet</h3>
+                        <p class="text-gray-600 mb-2">Premium quality material</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-indigo-600 font-bold">$49.99</span>
+                            <button class="add-to-cart bg-indigo-600 text-white px-3 py-1 rounded hover:bg-indigo-700 transition" data-id="4">
+                                <i class="fas fa-shopping-cart mr-1"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <a href="pages/shop.html" class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-md font-medium hover:bg-indigo-700 transition">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-12 md:py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Shop by Category</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Category 1 -->
+                <a href="pages/shop.html?category=bags" class="relative rounded-lg overflow-hidden group">
+                    <img src="images/placeholder.html" alt="Bags" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                        <h3 class="text-white text-xl font-bold">Bags</h3>
+                    </div>
+                </a>
+                
+                <!-- Category 2 -->
+                <a href="pages/shop.html?category=watches" class="relative rounded-lg overflow-hidden group">
+                    <img src="images/placeholder.html" alt="Watches" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                        <h3 class="text-white text-xl font-bold">Watches</h3>
+                    </div>
+                </a>
+                
+                <!-- Category 3 -->
+                <a href="pages/shop.html?category=accessories" class="relative rounded-lg overflow-hidden group">
+                    <img src="images/placeholder.html" alt="Accessories" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                        <h3 class="text-white text-xl font-bold">Accessories</h3>
+                    </div>
+                </a>
+                
+                <!-- Category 4 -->
+                <a href="pages/shop.html?category=jewelry" class="relative rounded-lg overflow-hidden group">
+                    <img src="images/placeholder.html" alt="Jewelry" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                        <h3 class="text-white text-xl font-bold">Jewelry</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-12 md:py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Why Shop With Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="text-center">
+                    <div class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shipping-fast text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Fast Shipping</h3>
+                    <p class="text-gray-600">Free shipping on all orders over $50. Quick delivery to your doorstep.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="text-center">
+                    <div class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Secure Payments</h3>
+                    <p class="text-gray-600">All transactions are secure and encrypted. Shop with confidence.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="text-center">
+                    <div class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-undo text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Easy Returns</h3>
+                    <p class="text-gray-600">30-day return policy. Not satisfied? Get a full refund, no questions asked.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-12 md:py-16 bg-indigo-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-4">Subscribe to Our Newsletter</h2>
+                <p class="mb-6">Stay updated with our latest products and exclusive offers.</p>
+                <form id="newsletter-form" class="flex flex-col sm:flex-row gap-2">
+                    <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-md text-gray-800 focus:outline-none" required>
+                    <button type="submit" class="bg-white text-indigo-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Posh <span class="text-indigo-400">Picks</span></h3>
+                    <p class="text-gray-400 mb-4">Your destination for designer inspired merchandise at affordable prices.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="pages/shop.html" class="text-gray-400 hover:text-white transition">Shop</a></li>
+                        <li><a href="pages/about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="pages/contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Customer Service -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Customer Service</h4>
+                    <ul class="space-y-2">
+                        <li><a href="pages/faq.html" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                        <li><a href="pages/shipping.html" class="text-gray-400 hover:text-white transition">Shipping & Returns</a></li>
+                        <li><a href="pages/terms.html" class="text-gray-400 hover:text-white transition">Terms & Conditions</a></li>
+                        <li><a href="pages/privacy.html" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> 123 Fashion Street, New York, NY</li>
+                        <li><i class="fas fa-phone mr-2"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@poshpicks.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Posh Picks. All rights reserved.</p>
+                <p class="mt-2">Payment methods accepted: <i class="fab fa-cc-visa mx-1"></i> <i class="fab fa-cc-mastercard mx-1"></i> <i class="fab fa-cc-amex mx-1"></i> <i class="fab fa-cc-paypal mx-1"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
